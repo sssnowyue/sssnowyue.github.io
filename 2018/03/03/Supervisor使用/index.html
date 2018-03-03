@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="virtualenv,Python," />
+  <meta name="keywords" content="部署,Supervisor,进程管理," />
 
 
 
@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="virtualenv创建隔离的Python环境常用操作安装virtualenv1sudo pip install virtualenv  创建隔离环境1virtual env_name  激活隔离环境1source env_name/bin/activate  退出隔离环境1deactivate  删除环境1rm -r env_name  VirtualEnvWrapper管理虚拟环境安装与配置操">
-<meta name="keywords" content="virtualenv,Python">
+<meta name="description" content="介绍：Supervisor由Python开发的一套通用的进程管理client/server 系统 特点： 普通的命令行进程变为后台进程 监控进程状态 异常退出时能自动重启 ……安装：12345678#自动设置为开机自动启动#Ubuntuapt-get install supervisor#CentOSyum install supervisor#需手动设置开机自动启动pip install sup">
+<meta name="keywords" content="部署,Supervisor,进程管理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="virtualenv创建隔离的Python环境">
-<meta property="og:url" content="http://sssnowyue.github.io/2018/03/03/virtualenv创建隔离的Python环境/index.html">
+<meta property="og:title" content="Supervisor使用">
+<meta property="og:url" content="http://sssnowyue.github.io/2018/03/03/Supervisor使用/index.html">
 <meta property="og:site_name" content="SSSNOW">
-<meta property="og:description" content="virtualenv创建隔离的Python环境常用操作安装virtualenv1sudo pip install virtualenv  创建隔离环境1virtual env_name  激活隔离环境1source env_name/bin/activate  退出隔离环境1deactivate  删除环境1rm -r env_name  VirtualEnvWrapper管理虚拟环境安装与配置操">
+<meta property="og:description" content="介绍：Supervisor由Python开发的一套通用的进程管理client/server 系统 特点： 普通的命令行进程变为后台进程 监控进程状态 异常退出时能自动重启 ……安装：12345678#自动设置为开机自动启动#Ubuntuapt-get install supervisor#CentOSyum install supervisor#需手动设置开机自动启动pip install sup">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-03-03T13:33:01.000Z">
+<meta property="og:updated_time" content="2018-03-03T13:59:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="virtualenv创建隔离的Python环境">
-<meta name="twitter:description" content="virtualenv创建隔离的Python环境常用操作安装virtualenv1sudo pip install virtualenv  创建隔离环境1virtual env_name  激活隔离环境1source env_name/bin/activate  退出隔离环境1deactivate  删除环境1rm -r env_name  VirtualEnvWrapper管理虚拟环境安装与配置操">
+<meta name="twitter:title" content="Supervisor使用">
+<meta name="twitter:description" content="介绍：Supervisor由Python开发的一套通用的进程管理client/server 系统 特点： 普通的命令行进程变为后台进程 监控进程状态 异常退出时能自动重启 ……安装：12345678#自动设置为开机自动启动#Ubuntuapt-get install supervisor#CentOSyum install supervisor#需手动设置开机自动启动pip install sup">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://sssnowyue.github.io/2018/03/03/virtualenv创建隔离的Python环境/"/>
+  <link rel="canonical" href="http://sssnowyue.github.io/2018/03/03/Supervisor使用/"/>
 
 
 
 
 
-  <title> virtualenv创建隔离的Python环境 | SSSNOW </title>
+  <title> Supervisor使用 | SSSNOW </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
@@ -271,7 +271,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://sssnowyue.github.io/2018/03/03/virtualenv创建隔离的Python环境/">
+    <link itemprop="mainEntityOfPage" href="http://sssnowyue.github.io/2018/03/03/Supervisor使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sssnowyue">
@@ -292,7 +292,7 @@
             
             
               
-                virtualenv创建隔离的Python环境
+                Supervisor使用
               
             
           </h1>
@@ -307,7 +307,7 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-03-03T19:13:33+08:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-03-03T21:42:59+08:00">
                 2018-03-03
               </time>
             
@@ -330,8 +330,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/部署/" itemprop="url" rel="index">
+                    <span itemprop="name">部署</span>
                   </a>
                 </span>
 
@@ -365,33 +365,21 @@
       
 
       
-        <h3 id="virtualenv创建隔离的Python环境"><a href="#virtualenv创建隔离的Python环境" class="headerlink" title="virtualenv创建隔离的Python环境"></a><center><strong>virtualenv</strong>创建隔离的Python环境</center></h3><h4 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a><center>常用操作</center><br></h4><h5 id="安装virtualenv"><a href="#安装virtualenv" class="headerlink" title="安装virtualenv"></a>安装virtualenv</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenv</span><br></pre></td></tr></table></figure>
+        <h4 id="介绍："><a href="#介绍：" class="headerlink" title="介绍："></a>介绍：</h4><h5 id="Supervisor由Python开发的一套通用的进程管理client-server-系统"><a href="#Supervisor由Python开发的一套通用的进程管理client-server-系统" class="headerlink" title="Supervisor由Python开发的一套通用的进程管理client/server 系统"></a>Supervisor由Python开发的一套通用的进程管理client/server 系统</h5><p><br></p>
+<h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul>
+<li>普通的命令行进程变为后台进程</li>
+<li>监控进程状态</li>
+<li>异常退出时能自动重启</li>
+<li>……<br><br><h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#自动设置为开机自动启动</span><br><span class="line">#Ubuntu</span><br><span class="line">apt-get install supervisor</span><br><span class="line">#CentOS</span><br><span class="line">yum install supervisor</span><br><span class="line"></span><br><span class="line">#需手动设置开机自动启动</span><br><span class="line">pip install supervisor</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <p><br></p>
-<h5 id="创建隔离环境"><a href="#创建隔离环境" class="headerlink" title="创建隔离环境"></a>创建隔离环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtual env_name</span><br></pre></td></tr></table></figure>
+<h4 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h4><h5 id="1、supervisord配置："><a href="#1、supervisord配置：" class="headerlink" title="1、supervisord配置："></a>1、supervisord配置：</h5><p>supervisord 的配置文件默认位置：/etc/supervisord.conf,在此文件（<code>;</code>后面为注释）尾部添加如下代码来引入 /etc/supervisor/conf.d/下的 .conf 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[include]</span><br><span class="line">files = /etc/supervisor/conf.d/*.conf</span><br></pre></td></tr></table></figure></p>
+<h5 id="2、program配置："><a href="#2、program配置：" class="headerlink" title="2、program配置："></a>2、program配置：</h5><p>在/etc/supervisor/conf.d/下创建app_name.conf文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[program:app_name]</span><br><span class="line">command=python server.py                                            ; 启动命令，普通的命令行</span><br><span class="line">user=root                                                                       ; 用哪个用户启动</span><br><span class="line">autorestart=True                                                            ; 程序异常退出后自动重启</span><br><span class="line">autostart=True                                                               ; 在 supervisord 启动的时候也自动启动</span><br><span class="line">environment=PATH=&quot;/home/app_env/bin&quot;                      ; 可以通过 environment 来添加需要的环境变量，一种常见的用法是使用指定的 virtualenv 环境</span><br><span class="line">directory=/home/app/                                                   ; 程序的启动目录</span><br><span class="line">stdout_logfile=/var/log/supervisor/app_name_out.log    ; out 日志输出位置</span><br><span class="line">stderr_logfile=/var/log/supervisor/app_name_err.log     ; err 日志输出位置</span><br></pre></td></tr></table></figure></p>
 <p><br></p>
-<h5 id="激活隔离环境"><a href="#激活隔离环境" class="headerlink" title="激活隔离环境"></a>激活隔离环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source env_name/bin/activate</span><br></pre></td></tr></table></figure>
+<h4 id="基本操作详解："><a href="#基本操作详解：" class="headerlink" title="基本操作详解："></a>基本操作详解：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#初始启动Supervisord，启动、管理配置中设置的进程;</span><br><span class="line">supervisord</span><br><span class="line">#只载入最新的配置文件, 并不重启任何进程</span><br><span class="line">supervisorctl reread</span><br><span class="line">#根据最新的配置文件，启动新配置或有改动的进程，配置没有改动的进程不会受影响而重启</span><br><span class="line">supervisorctl update</span><br><span class="line">#载入最新的配置文件，停止原来的所有进程并按新的配置启动管理所有进程</span><br><span class="line">supervisorctl reload</span><br><span class="line">#停止（启动，重启）某一个进程(app_name)</span><br><span class="line">supervisorctl stop(start, restart) app_name</span><br></pre></td></tr></table></figure>
 <p><br></p>
-<h5 id="退出隔离环境"><a href="#退出隔离环境" class="headerlink" title="退出隔离环境"></a>退出隔离环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h5 id="删除环境"><a href="#删除环境" class="headerlink" title="删除环境"></a>删除环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r env_name</span><br></pre></td></tr></table></figure>
-<p><br><br></p>
-<h3 id="VirtualEnvWrapper管理虚拟环境"><a href="#VirtualEnvWrapper管理虚拟环境" class="headerlink" title="VirtualEnvWrapper管理虚拟环境"></a><center><strong>VirtualEnvWrapper</strong>管理虚拟环境</center></h3><h4 id="安装与配置操作"><a href="#安装与配置操作" class="headerlink" title="安装与配置操作"></a><center>安装与配置操作</center><br></h4><h5 id="安装VirtualEnvWrapper"><a href="#安装VirtualEnvWrapper" class="headerlink" title="安装VirtualEnvWrapper"></a>安装VirtualEnvWrapper</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install virtualenvwrapper</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h5 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;export WORKON_HOME=~/Env&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">echo &quot;source /usr/local/bin/virtualenvwrapper.sh&quot; &gt;&gt; ~/.bashrc</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h5 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="常用操作-1"><a href="#常用操作-1" class="headerlink" title="常用操作"></a><center>常用操作</center><br></h4><h5 id="创建隔离环境-1"><a href="#创建隔离环境-1" class="headerlink" title="创建隔离环境"></a>创建隔离环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv env_name</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv --system-site-packages env_name#依赖系统第三方软件包</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h5 id="列出已有环境"><a href="#列出已有环境" class="headerlink" title="列出已有环境"></a>列出已有环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">workon</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h5 id="切换环境"><a href="#切换环境" class="headerlink" title="切换环境"></a>切换环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">workon env_name</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h5 id="退出隔离环境-1"><a href="#退出隔离环境-1" class="headerlink" title="退出隔离环境"></a>退出隔离环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h5 id="删除环境-1"><a href="#删除环境-1" class="headerlink" title="删除环境"></a>删除环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmvirtualenv env_name</span><br></pre></td></tr></table></figure>
-<p><br></p>
+<h4 id="supervisorctl-操作："><a href="#supervisorctl-操作：" class="headerlink" title="supervisorctl 操作："></a>supervisorctl 操作：</h4><p>supervisorctl 是 supervisord 的命令行客户端工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ supervisorctl</span><br><span class="line">supervisorctl &gt; help                      #查看帮助</span><br><span class="line">supervisorctl &gt; status                   #查看程序状态</span><br><span class="line">supervisorctl &gt; start app_name     #开启程序</span><br><span class="line">supervisorctl &gt; stop app_name      #暂停程序</span><br><span class="line">supervisorctl &gt; restart app_name  #重启程序</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -415,9 +403,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/virtualenv/" rel="tag"># virtualenv</a>
+            <a href="/tags/部署/" rel="tag"># 部署</a>
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/Supervisor/" rel="tag"># Supervisor</a>
+          
+            <a href="/tags/进程管理/" rel="tag"># 进程管理</a>
           
         </div>
       
@@ -430,14 +420,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/03/virtualenv创建隔离的Python环境/" rel="next" title="virtualenv创建隔离的Python环境">
+                <i class="fa fa-chevron-left"></i> virtualenv创建隔离的Python环境
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/03/Supervisor使用/" rel="prev" title="Supervisor使用">
-                Supervisor使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/03/linux-后台执行进程/" rel="prev" title="linux 后台执行进程">
+                linux 后台执行进程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -601,7 +595,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#virtualenv创建隔离的Python环境"><span class="nav-number">1.</span> <span class="nav-text">virtualenv创建隔离的Python环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用操作"><span class="nav-number">1.1.</span> <span class="nav-text">常用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装virtualenv"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装virtualenv</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建隔离环境"><span class="nav-number">1.1.2.</span> <span class="nav-text">创建隔离环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#激活隔离环境"><span class="nav-number">1.1.3.</span> <span class="nav-text">激活隔离环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#退出隔离环境"><span class="nav-number">1.1.4.</span> <span class="nav-text">退出隔离环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除环境"><span class="nav-number">1.1.5.</span> <span class="nav-text">删除环境</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VirtualEnvWrapper管理虚拟环境"><span class="nav-number">2.</span> <span class="nav-text">VirtualEnvWrapper管理虚拟环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装与配置操作"><span class="nav-number">2.1.</span> <span class="nav-text">安装与配置操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装VirtualEnvWrapper"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装VirtualEnvWrapper</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置环境"><span class="nav-number">2.1.2.</span> <span class="nav-text">配置环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#激活"><span class="nav-number">2.1.3.</span> <span class="nav-text">激活</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用操作-1"><span class="nav-number">2.2.</span> <span class="nav-text">常用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建隔离环境-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">创建隔离环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#列出已有环境"><span class="nav-number">2.2.2.</span> <span class="nav-text">列出已有环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切换环境"><span class="nav-number">2.2.3.</span> <span class="nav-text">切换环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#退出隔离环境-1"><span class="nav-number">2.2.4.</span> <span class="nav-text">退出隔离环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除环境-1"><span class="nav-number">2.2.5.</span> <span class="nav-text">删除环境</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍："><span class="nav-number">1.</span> <span class="nav-text">介绍：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Supervisor由Python开发的一套通用的进程管理client-server-系统"><span class="nav-number">1.1.</span> <span class="nav-text">Supervisor由Python开发的一套通用的进程管理client/server 系统</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点："><span class="nav-number">2.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装："><span class="nav-number">3.</span> <span class="nav-text">安装：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置："><span class="nav-number">4.</span> <span class="nav-text">配置：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、supervisord配置："><span class="nav-number">4.1.</span> <span class="nav-text">1、supervisord配置：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、program配置："><span class="nav-number">4.2.</span> <span class="nav-text">2、program配置：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本操作详解："><span class="nav-number">5.</span> <span class="nav-text">基本操作详解：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#supervisorctl-操作："><span class="nav-number">6.</span> <span class="nav-text">supervisorctl 操作：</span></a></li></ol></div>
             
 
           </div>

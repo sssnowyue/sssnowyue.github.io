@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="部署,进程管理," />
 
 
 
@@ -87,16 +87,18 @@
 
 
 
-<meta name="description" content="這個世界會好嗎？">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SSSNOW">
-<meta property="og:url" content="http://sssnowyue.github.io/index.html">
+<meta name="description" content="概念： 进程组： 一个或多个进程的集合，每一个进程组都有唯一一个进程组ID，即进程组。 会话器： 一个或多个进程组的集合，有唯一一个会话期首进程（session leader）。会话期ID为首进程的ID。 控制进程: 与控制终端连接的会话期首进程叫做控制进程。    PID = 进程ID （由内核根据延迟重用算法生成） PPID = 父进程ID（只能由内核修改） PGID = 进程组ID（子进程、">
+<meta name="keywords" content="部署,进程管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux 后台执行进程">
+<meta property="og:url" content="http://sssnowyue.github.io/2018/03/03/linux-后台执行进程/index.html">
 <meta property="og:site_name" content="SSSNOW">
-<meta property="og:description" content="這個世界會好嗎？">
+<meta property="og:description" content="概念： 进程组： 一个或多个进程的集合，每一个进程组都有唯一一个进程组ID，即进程组。 会话器： 一个或多个进程组的集合，有唯一一个会话期首进程（session leader）。会话期ID为首进程的ID。 控制进程: 与控制终端连接的会话期首进程叫做控制进程。    PID = 进程ID （由内核根据延迟重用算法生成） PPID = 父进程ID（只能由内核修改） PGID = 进程组ID（子进程、">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-03-03T14:04:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SSSNOW">
-<meta name="twitter:description" content="這個世界會好嗎？">
+<meta name="twitter:title" content="linux 后台执行进程">
+<meta name="twitter:description" content="概念： 进程组： 一个或多个进程的集合，每一个进程组都有唯一一个进程组ID，即进程组。 会话器： 一个或多个进程组的集合，有唯一一个会话期首进程（session leader）。会话期ID为首进程的ID。 控制进程: 与控制终端连接的会话期首进程叫做控制进程。    PID = 进程ID （由内核根据延迟重用算法生成） PPID = 父进程ID（只能由内核修改） PGID = 进程组ID（子进程、">
 
 
 
@@ -124,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://sssnowyue.github.io/"/>
+  <link rel="canonical" href="http://sssnowyue.github.io/2018/03/03/linux-后台执行进程/"/>
 
 
 
 
 
-  <title> SSSNOW </title>
+  <title> linux 后台执行进程 | SSSNOW </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
@@ -155,9 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -260,160 +260,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://sssnowyue.github.io/2018/03/03/Django-Nginx-uwsgi-Ubuntu配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sssnowyue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SSSNOW">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/03/03/Django-Nginx-uwsgi-Ubuntu配置/" itemprop="url">
-                  Django+Nginx+uwsgi+Ubuntu配置
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-03-03T22:05:59+08:00">
-                2018-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/部署/" itemprop="url" rel="index">
-                    <span itemprop="name">部署</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          参考官方文档
-安装部分:1.虚拟环境下安装Djang1pip install django
-2.安装uwsgi1sudo pip install uwsgi
-3.安装Nginx1sudo apt-get install nginx
-Nginx常用操作：
-开启nginx：serverice nginx
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/03/Django-Nginx-uwsgi-Ubuntu配置/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
 
   
 
@@ -443,10 +292,7 @@ Nginx常用操作：
             
             
               
-                
-                <a class="post-title-link" href="/2018/03/03/linux-后台执行进程/" itemprop="url">
-                  linux 后台执行进程
-                </a>
+                linux 后台执行进程
               
             
           </h1>
@@ -519,361 +365,101 @@ Nginx常用操作：
       
 
       
-        
-          
-          概念：
-进程组： 一个或多个进程的集合，每一个进程组都有唯一一个进程组ID，即进程组。
-会话器： 一个或多个进程组的集合，有唯一一个会话期首进程（session leader）。会话期ID为首进程的ID。
-控制进程: 与控制终端连接的会话期首进程叫做控制进程。
-
-
-
-PID = 进程ID （由内核根
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/03/linux-后台执行进程/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h4 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h4><ul>
+<li>进程组： 一个或多个进程的集合，每一个进程组都有唯一一个进程组ID，即进程组。</li>
+<li>会话器： 一个或多个进程组的集合，有唯一一个会话期首进程（session leader）。会话期ID为首进程的ID。</li>
+<li>控制进程: 与控制终端连接的会话期首进程叫做控制进程。</li>
+</ul>
+<hr>
+<ul>
+<li>PID = 进程ID （由内核根据延迟重用算法生成）</li>
+<li>PPID = 父进程ID（只能由内核修改）</li>
+<li>PGID = 进程组ID（子进程、父进程都能修改）</li>
+<li>SID = 会话ID（进程自身可以修改，但有限制）</li>
+<li>TPGID= 控制终端进程组ID（由控制终端修改，用于指示当前前台进程组）</li>
+</ul>
+<hr>
+<ul>
+<li>会话和进程组的关系：<br>每次用户登录终端时会产生一个会话（session）。从用户登录开始到用户退出为止，这段时间内在该终端执行的进程都属于这一个会话。<br>每个进程除了有一进程ID之外，还属于一个进程组（Process Group）。进程组是一个或多个进程的集合，每个进程组有一个唯一的进程组ID。多个进程属于进程组的情况是多个进程用管道“|”号连接进行执行。如果在命令行执行单个进程时这个进程组只有这一个进程。</li>
+</ul>
+<hr>
+<ul>
+<li>挂断信号（SIGHUP）（默认的动作是终止程序）：<br>当终端接口检测到网络连接断开，将挂断信号发送给控制进程（会话期首进程）。如果会话期首进程终止，则该信号发送到该会话期前台进程组。一个进程退出导致一个孤儿进程组中产生时，如果任意一个孤儿进程组进程处于STOP状态，发送SIGHUP和SIGCONT信号到该进程组中所有进程。<br>因此当网络断开或终端窗口关闭后，也就是SSH断开以后，控制进程收到SIGHUP信号退出，会导致该会话期内其他进程退出。<br><br><br><br><h4 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h4>1.<strong>nohup</strong><h5 id="让提交的命令忽略所有的SIGHUP信号"><a href="#让提交的命令忽略所有的SIGHUP信号" class="headerlink" title="让提交的命令忽略所有的SIGHUP信号"></a>让提交的命令忽略所有的SIGHUP信号</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ping www.baidu.com &amp;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br><br>2.<strong>setsid</strong></p>
+<h5 id="在一个新的会话中运行命令，从而可以避开当前终端发出的SIGHUP信号"><a href="#在一个新的会话中运行命令，从而可以避开当前终端发出的SIGHUP信号" class="headerlink" title="在一个新的会话中运行命令，从而可以避开当前终端发出的SIGHUP信号"></a>在一个新的会话中运行命令，从而可以避开当前终端发出的SIGHUP信号</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setsid ping www.baidu.com</span><br></pre></td></tr></table></figure>
+<p><br><br>3.<strong>&amp;</strong></p>
+<h5 id="结合-产生一个新的子shell并用-amp-让这个子shell中将任务放置到后台运行，从而不受当前shell终端的SIGHUP信号影响"><a href="#结合-产生一个新的子shell并用-amp-让这个子shell中将任务放置到后台运行，从而不受当前shell终端的SIGHUP信号影响" class="headerlink" title="结合()产生一个新的子shell并用&amp;让这个子shell中将任务放置到后台运行，从而不受当前shell终端的SIGHUP信号影响"></a>结合()产生一个新的子shell并用&amp;让这个子shell中将任务放置到后台运行，从而不受当前shell终端的SIGHUP信号影响</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(ping www.baidu.com &amp;)</span><br></pre></td></tr></table></figure>
+<p><br><br>4.<strong>disown</strong></p>
+<h5 id="使用场景："><a href="#使用场景：" class="headerlink" title="使用场景："></a>使用场景：</h5><p>如果我们未加任何处理（加 nohup 或者 setsid）就已经提交了命令，可以使用disown补救让它避免 HUP 信号</p>
+<h5 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">disown -h jobspec #使某个作业忽略HUP信号</span><br><span class="line">disown -ah #使所有的作业都忽略HUP信号</span><br><span class="line">disown -rh #使正在运行的作业忽略HUP信号</span><br></pre></td></tr></table></figure>
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://sssnowyue.github.io/2018/03/03/Supervisor使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sssnowyue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SSSNOW">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/03/03/Supervisor使用/" itemprop="url">
-                  Supervisor使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-03-03T21:42:59+08:00">
-                2018-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/部署/" itemprop="url" rel="index">
-                    <span itemprop="name">部署</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/部署/" rel="tag"># 部署</a>
           
-
+            <a href="/tags/进程管理/" rel="tag"># 进程管理</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-          介绍：Supervisor由Python开发的一套通用的进程管理client/server 系统
-特点：
-普通的命令行进程变为后台进程
-监控进程状态
-异常退出时能自动重启
-……安装：12345678#自动设置为开机自动启动#Ubuntuapt-get install supervisor#CentO
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/03/Supervisor使用/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/03/Supervisor使用/" rel="next" title="Supervisor使用">
+                <i class="fa fa-chevron-left"></i> Supervisor使用
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://sssnowyue.github.io/2018/03/03/virtualenv创建隔离的Python环境/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sssnowyue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SSSNOW">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/03/03/Django-Nginx-uwsgi-Ubuntu配置/" rel="prev" title="Django+Nginx+uwsgi+Ubuntu配置">
+                Django+Nginx+uwsgi+Ubuntu配置 <i class="fa fa-chevron-right"></i>
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2018/03/03/virtualenv创建隔离的Python环境/" itemprop="url">
-                  virtualenv创建隔离的Python环境
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-03-03T19:13:33+08:00">
-                2018-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          virtualenv创建隔离的Python环境常用操作安装virtualenv1sudo pip install virtualenv
-
-创建隔离环境1virtual env_name
-
-激活隔离环境1source env_name/bin/activate
-
-退出隔离环境1deactivate
-
-
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/03/virtualenv创建隔离的Python环境/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -881,6 +467,10 @@ PID = 进程ID （由内核根
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -900,8 +490,17 @@ PID = 进程ID （由内核根
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -997,6 +596,22 @@ PID = 进程ID （由内核根
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念："><span class="nav-number">1.</span> <span class="nav-text">概念：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#操作："><span class="nav-number">2.</span> <span class="nav-text">操作：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#让提交的命令忽略所有的SIGHUP信号"><span class="nav-number">2.1.</span> <span class="nav-text">让提交的命令忽略所有的SIGHUP信号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在一个新的会话中运行命令，从而可以避开当前终端发出的SIGHUP信号"><span class="nav-number">2.2.</span> <span class="nav-text">在一个新的会话中运行命令，从而可以避开当前终端发出的SIGHUP信号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#结合-产生一个新的子shell并用-amp-让这个子shell中将任务放置到后台运行，从而不受当前shell终端的SIGHUP信号影响"><span class="nav-number">2.3.</span> <span class="nav-text">结合()产生一个新的子shell并用&amp;让这个子shell中将任务放置到后台运行，从而不受当前shell终端的SIGHUP信号影响</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用场景："><span class="nav-number">2.4.</span> <span class="nav-text">使用场景：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用方法："><span class="nav-number">2.5.</span> <span class="nav-text">使用方法：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1109,6 +724,10 @@ PID = 进程ID （由内核根
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
